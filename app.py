@@ -23,7 +23,7 @@ def get_artist_songs(artist_name):
     if redis_cache.get(artist_name) is not None and request.args.get('cache') != "False":
         return jsonify(json.loads(redis_cache.get(artist_name)))
 
-    if redis_cache.get(artist_name) is not None and request.args.get('cache') == "False":
+    elif redis_cache.get(artist_name) is not None and request.args.get('cache') == "False":
         artist = genius.search_artist(artist_name, max_songs=10, sort="popularity", include_features=True)
         r.delete(artist_name)
         artist_list = []
@@ -56,11 +56,13 @@ def get_artist_songs(artist_name):
                     "song_art_image_url":song.song_art_image_url,
                     "title":song.title
                     }
-                dynamoinfo = {
-                    "id": str(uuid.uuid4()),
-                    "artist":song.artist,
-                }
                 artist_list.append(artist_info)
+                
+            dynamoinfo = {
+                "id": str(uuid.uuid4()),
+                "artist":artist_name,
+            }
+                
             table.put_item(Item=dynamoinfo)
             redis_cache.set(artist_name,json.dumps(artist_list)) 
             redis_cache.expire(artist_name, 604800) # Expiration in one week
