@@ -2,7 +2,8 @@
 
 Passos para rodar o projeto:
 
-    1 - Após clonar o projeto, entrar na pasta "flask-test-genius-api" e realizar a instalação das dependências que estão no arquivo requirements.txt através do comando "pip install -r requiriments.txt".
+    1 - Após clonar o projeto, entrar na pasta "flask-test-genius-api" e realizar a instalação das dependências
+    que estão no arquivo requirements.txt através do comando "pip install -r requiriments.txt".
 
     2 - Adicionar as credenciais da AWS através do comando "aws configure".
 
