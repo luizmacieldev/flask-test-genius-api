@@ -16,11 +16,17 @@ Realizando Testes :
 Para realizar os testes, utilizar a seguinte url: "http://127.0.0.1:5000/genius/<nome_do_artista>/"
 
 Exemplos de teste:
+
     http://127.0.0.1:5000/genius/metallica/
+
     http://127.0.0.1:5000/genius/nirvana/
+
     http://127.0.0.1:5000/genius/nirvana/?cache=False
+
     http://127.0.0.1:5000/genius/aerosmith/
+
     http://127.0.0.1:5000/genius/eminem/
+
     http://127.0.0.1:5000/genius/eminem/?cache=False
 
 
