@@ -1,4 +1,4 @@
-import redis,boto3,json,uuid,lyricsgenius,os
+import redis,boto3,json,uuid,lyricsgenius
 from flask import Flask,jsonify,request
 from decouple import config
 
