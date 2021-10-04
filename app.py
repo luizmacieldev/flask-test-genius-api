@@ -72,7 +72,7 @@ def get_artist_songs(artist_name):
 
     return jsonify(artist_list),201
 
-@app.route("/genius/<artist_name>/")
+@app.route("/genius/<artist_name>")
 def get(artist_name):
     return get_artist_songs(artist_name)
 
