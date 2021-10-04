@@ -13,8 +13,6 @@ Passos para rodar o projeto:
 
     3 - Rodar o script "create_table.py" através do comando "python create_table.py",
     
-           
-
     4 - Rodar o script "python app.py"
 
 
