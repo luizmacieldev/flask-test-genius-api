@@ -6,8 +6,14 @@ Passos para rodar o projeto:
     que estão no arquivo requirements.txt através do comando "pip install -r requiriments.txt".
 
     2 - Adicionar as credenciais da AWS através do comando "aws configure".
+    passando os parâmetros:
+            "AWS ACCESS KEY id",
+            "AWS SECRET ACCESS KEY",
+            "Default Region Name"
 
-    3 - Rodar o script "create_table.py" através do comando "python create_table.py"
+    3 - Rodar o script "create_table.py" através do comando "python create_table.py",
+    
+           
 
     4 - Rodar o script "python app.py"
 
