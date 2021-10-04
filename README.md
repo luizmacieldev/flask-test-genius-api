@@ -32,7 +32,7 @@ Exemplos de teste:
 
     http://127.0.0.1:5000/genius/eminem
 
-    http://127.0.0.1:5000/genius/eminem/cache=False
+    http://127.0.0.1:5000/genius/eminem?cache=False
 
 
 
