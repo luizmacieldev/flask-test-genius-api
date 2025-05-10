@@ -1,46 +1,52 @@
 # flask-test-genius-api
 
-Passos para rodar o projeto:
+Steps:
 
-    1 - Após clonar o projeto, entrar na pasta "flask-test-genius-api" e realizar a instalação das dependências
-    que estão no arquivo requirements.txt através do comando "pip install -r requiriments.txt".
+   1 - After cloning the project, navigate to the "flask-test-genius-api" folder and install the dependencies listed in the requirements.txt file using the command:
+        pip install -r requirements.txt
 
-    2 - Adicionar as credenciais da AWS através do comando "aws configure".
-    passando os parâmetros:
+
+    2 -2 - Add your AWS credentials by running the command: aws configure
+    and providing the following parameters:
             "AWS ACCESS KEY id",
             "AWS SECRET ACCESS KEY",
             "Default Region Name"
 
-    3 - Rodar o script "create_table.py" através do comando "python create_table.py",
+    3 - Run the create_table.py script with the command:
+        python create_table.py
+
     
-    4 - Rodar o script "python app.py"
+    4 - Start the application by running:
+        python app.py
+        
 
 
-Realizando Testes :
+Running Tests: <br/>
+To perform tests, use the following URL format:
+http://127.0.0.1:5000/genius/<artist_name>
 
-Para realizar os testes, utilizar a seguinte url: "http://127.0.0.1:5000/genius/<nome_do_artista>"
+Test examples: <br/>
 
-Exemplos de teste:
+http://127.0.0.1:5000/genius/metallica
 
-    http://127.0.0.1:5000/genius/metallica
+http://127.0.0.1:5000/genius/nirvana
 
-    http://127.0.0.1:5000/genius/nirvana
+http://127.0.0.1:5000/genius/nirvana?cache=False
 
-    http://127.0.0.1:5000/genius/nirvana?cache=False
+http://127.0.0.1:5000/genius/aerosmith
 
-    http://127.0.0.1:5000/genius/aerosmith
+http://127.0.0.1:5000/genius/eminem
 
-    http://127.0.0.1:5000/genius/eminem
+http://127.0.0.1:5000/genius/eminem?cache=False
 
-    http://127.0.0.1:5000/genius/eminem?cache=False
+To view data in Redis, use redis-cli with the following commands:
+KEYS * – View all artists saved in Redis
+
+GET "artist_name" – Check the saved information of a specific artist
+
+TTL "artist_name" – Check the expiration time (in seconds) of the record
 
 
-
-Para visualizar os dados no redis, utilizar o redis-cli e os seguintes comandos:
-
-    KEYS *                      (Visualizar todos artistas que estão salvos no redis)
-    GET "nome_do_artista"       (Verificar as informações do artista que foram salvas) 
-    TTL "nome_do_artista"       (Verificar o tempo de expiração (em segundos) do registro) 
 
 
 
